@@ -1,24 +1,14 @@
-import math
+from algorithms import Vector, binary_search, merge_sort
 
 
-class Vector:
-    def __init__(self, x=0, y=0):
-        self.x = x
-        self.y = y
+def main() -> None:
+    values = [1, 5, 2, 8, 3]
+    sorted_values = merge_sort(values)
 
-    def __repr__(self):
-        return f'Vector({self.x!r}, {self.y!r})'
+    print(Vector(3, 4))
+    print(sorted_values)
+    print(binary_search(sorted_values, 5))
 
-    def __abs__(self):
-        return math.hypot(self.x, self.y)
 
-    def __bool__(self):
-        return bool(abs(self))
-
-    def __add__(self, other):
-        x = self.x + other.x
-        y = self.y + other.y
-        return Vector(x, y)
-
-    def __mul__(self, scalar):
-        return Vector(self.x * scalar, self.y * scalar)
+if __name__ == "__main__":
+    main()

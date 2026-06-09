@@ -1,12 +1,10 @@
-const { NodeSLL } = require('./node.js');
+import { NodeSLL } from './node.js';
 
-class Stack {
-  constructor() {
-    this.top = null;
-    this.size = 0;
-  }
+export class Stack<T> {
+  private top: NodeSLL<T> | null = null;
+  public size = 0;
 
-  push(value) {
+  public push(value: T): void {
     if (!this.top) {
       this.top = new NodeSLL(value);
     } else {
@@ -18,7 +16,7 @@ class Stack {
     this.size++;
   }
 
-  pop() {
+  public pop(): T | null {
     if (!this.top) {
       return null;
     }
@@ -30,9 +28,9 @@ class Stack {
     return value;
   }
 
-  toArray() {
+  public toArray(): T[] {
     let current = this.top;
-    const arr = Array(this.size);
+    const arr = Array<T>(this.size);
     let counter = this.size - 1;
 
     while (current) {
@@ -42,8 +40,4 @@ class Stack {
 
     return arr;
   }
-}
-
-module.exports = {
-  Stack
 }

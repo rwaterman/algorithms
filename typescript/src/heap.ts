@@ -1,9 +1,9 @@
-class MaxBinaryHeap {
-  constructor() {
-    this.values = [];
-  }
+type Comparable = number | string;
 
-  insert(value) {
+export class MaxBinaryHeap<T extends Comparable = number> {
+  public values: T[] = [];
+
+  public insert(value: T): void {
     this.values.push(value);
 
     let index = this.values.length - 1; // root
@@ -23,8 +23,7 @@ class MaxBinaryHeap {
     }
   }
 
-  toArray() {
+  public toArray(): T[] {
     return this.values;
   }
 }
-

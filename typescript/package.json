@@ -1,17 +1,26 @@
 {
   "name": "algorithms",
   "version": "1.0.0",
-  "description": "Javascript Algorithms",
-  "main": "index.js",
+  "description": "TypeScript Algorithms",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p tsconfig.json",
+    "lint": "npm run typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit -p tsconfig.test.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rwaterman/udemy_js-algorithms-course.git"
   },
   "keywords": [
-    "javascript",
+    "typescript",
     "algorithms",
     "cs"
   ],
@@ -20,5 +29,11 @@
   "bugs": {
     "url": "https://github.com/rwaterman/udemy_js-algorithms-course/issues"
   },
-  "homepage": "https://github.com/rwaterman/udemy_js-algorithms-course#readme"
+  "homepage": "https://github.com/rwaterman/udemy_js-algorithms-course#readme",
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "husky": "^9.1.7",
+    "typescript": "^5.9.0",
+    "vitest": "^4.1.8"
+  }
 }

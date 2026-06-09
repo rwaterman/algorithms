@@ -1,0 +1,24 @@
+{
+  "name": "algorithms",
+  "version": "1.0.0",
+  "description": "Javascript Algorithms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rwaterman/udemy_js-algorithms-course.git"
+  },
+  "keywords": [
+    "javascript",
+    "algorithms",
+    "cs"
+  ],
+  "author": "Rick Waterman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rwaterman/udemy_js-algorithms-course/issues"
+  },
+  "homepage": "https://github.com/rwaterman/udemy_js-algorithms-course#readme"
+}

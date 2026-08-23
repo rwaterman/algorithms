@@ -1,6 +1,7 @@
 {
   "name": "algorithms",
   "version": "1.0.0",
+  "private": true,
   "description": "TypeScript Algorithms",
   "type": "module",
   "main": "dist/index.js",

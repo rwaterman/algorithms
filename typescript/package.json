@@ -32,9 +32,9 @@
   },
   "homepage": "https://github.com/rwaterman/udemy_js-algorithms-course#readme",
   "devDependencies": {
-    "@types/node": "^24.0.0",
+    "@types/node": "^26.2.0",
     "husky": "^9.1.7",
-    "typescript": "^5.9.0",
-    "vitest": "^4.1.8"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
   }
 }
